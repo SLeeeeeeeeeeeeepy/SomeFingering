@@ -1,0 +1,500 @@
+:root {
+  --bg-color: #fafafa;
+  --panel-bg: #ffffff;
+  --text-main: #333333;
+  --text-muted: #666666;
+  --accent-color: #2196f3;
+  --accent-hover: #1976d2;
+  --key-white: #ffffff;
+  --key-black: #222222;
+  --border-color: #e0e0e0;
+  --shadow-main: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="dark"] {
+  --bg-color: #0b0f19;
+  --panel-bg: #151b2b;
+  --text-main: #f0f4f8;
+  --text-muted: #8b9eb0;
+  --accent-color: #2196f3;
+  --accent-hover: #1976d2;
+  --key-white: #f0f4f8;
+  --key-black: #111111;
+  --border-color: #2c3549;
+  --shadow-main: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  min-height: 100vh;
+}
+
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem 2rem 2rem;
+}
+
+/* Header */
+.main-header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2rem;
+  border-bottom: 1px solid var(--border-color);
+  margin: 0 -2rem 2rem -2rem; /* bleed */
+  background: var(--panel-bg);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+}
+
+.header-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.main-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 0.25rem;
+  color: var(--text-main);
+  letter-spacing: -0.02em;
+}
+
+.main-subtitle {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+}
+
+.category-nav {
+  display: flex;
+  gap: 0.25rem;
+  background: var(--panel-bg);
+  padding: 0.35rem;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  width: fit-content;
+}
+
+.category-tab {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  padding: 0.6rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.category-tab:hover {
+  background: rgba(0, 0, 0, 0.04);
+  color: var(--text-main);
+}
+
+[data-theme="dark"] .category-tab:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.category-tab.active {
+  background: var(--accent-color);
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(33, 150, 243, 0.25);
+}
+
+.theme-toggle-btn {
+  background: var(--panel-bg);
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  box-shadow: var(--shadow-main);
+}
+
+.theme-toggle-btn:hover {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* HomePage Sections */
+.instrument-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.instrument-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.group-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-left: 3px solid var(--accent-color);
+  padding-left: 0.75rem;
+}
+
+/* HomePage */
+.home-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 80vh;
+}
+
+.category-tabs {
+  display: none;
+}
+
+.instruments-grid {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.instrument-card {
+  background: var(--panel-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 1.25rem;
+  width: 180px;
+  text-align: center;
+  text-decoration: none;
+  color: var(--text-main);
+  transition: all 0.2s ease;
+  box-shadow: var(--shadow-main);
+}
+
+.instrument-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent-color);
+  box-shadow: 0 8px 16px rgba(33, 150, 243, 0.1);
+}
+
+.card-icon {
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+}
+
+.instrument-card h3 {
+  font-size: 1rem;
+}
+
+.instrument-card.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.instrument-card.disabled:hover {
+  transform: none;
+  border-color: var(--border-color);
+  box-shadow: none;
+}
+
+/* FlutePage */
+.instrument-page {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.page-header-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.back-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.2s;
+  font-weight: 500;
+}
+
+.back-link:hover {
+  color: var(--accent-color);
+}
+
+.page-header h1 {
+  font-size: 1.75rem;
+}
+
+.instrument-workspace {
+  background: var(--panel-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: var(--shadow-main);
+}
+
+.visualization-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.active-note-display {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  background: var(--panel-bg);
+  padding: 1rem 3rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+
+.note-name {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--accent-color);
+}
+
+.octave-number {
+  font-size: 1.5rem;
+  color: var(--text-muted);
+  margin-left: 0.5rem;
+}
+
+.flute-diagram,
+.clarinet-diagram {
+  width: 100%;
+  max-width: 800px;
+}
+
+/* Controls */
+.controls-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.settings-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.volume-control {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: var(--panel-bg);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+
+.volume-icon {
+  color: var(--text-muted);
+}
+
+.volume-slider {
+  accent-color: var(--accent-color);
+  width: 100px;
+}
+
+.octave-selector {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: var(--panel-bg);
+  padding: 0.5rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+
+.selector-label {
+  color: var(--text-muted);
+  padding-left: 0.5rem;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.selector-buttons {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.octave-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-main);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+
+.octave-btn:hover {
+  background: var(--border-color);
+}
+
+.octave-btn.active {
+  background: var(--accent-color);
+  color: #fff;
+  font-weight: 500;
+}
+
+/* Piano */
+.piano-container {
+  width: 100%;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+}
+
+.piano-keyboard {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  height: 180px;
+  min-width: max-content;
+}
+
+.piano-key {
+  position: relative;
+  border: 1px solid #ccc;
+  border-radius: 0 0 4px 4px;
+  cursor: pointer;
+  transition: background 0.1s;
+  user-select: none;
+}
+
+.white-key {
+  background: var(--key-white);
+  width: 50px;
+  height: 100%;
+  z-index: 1;
+  color: #333;
+}
+
+.white-key.active, .white-key:active {
+  background: #e3f2fd;
+}
+
+.black-key {
+  background: var(--key-black);
+  width: 34px;
+  height: 60%;
+  z-index: 2;
+  margin-left: -17px;
+  margin-right: -17px;
+  color: #fff;
+  border: none;
+}
+
+.black-key.active, .black-key:active {
+  background: #1976d2;
+}
+
+.key-content {
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.note-label {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.black-key .note-label {
+  font-size: 0.8rem;
+}
+
+.key-hint {
+  font-size: 0.7rem;
+  color: var(--text-main);
+  border: 1px solid var(--border-color);
+  padding: 1px 3px;
+  border-radius: 3px;
+  background: var(--panel-bg);
+}
+
+.black-key .key-hint {
+  border-color: #555;
+  background: var(--key-black);
+  color: #ddd;
+}
+
+/* Description */
+.instrument-description {
+  border-top: 1px solid var(--border-color);
+  padding-top: 1.5rem;
+  margin-top: 1rem;
+}
+
+.instrument-description h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-main);
+}
+
+.instrument-description p {
+  color: var(--text-muted);
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+  .instrument-workspace {
+    padding: 1.5rem;
+  }
+  
+  .white-key {
+    width: 40px;
+  }
+  
+  .black-key {
+    width: 28px;
+    margin-left: -14px;
+    margin-right: -14px;
+  }
+  
+  .settings-row {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
