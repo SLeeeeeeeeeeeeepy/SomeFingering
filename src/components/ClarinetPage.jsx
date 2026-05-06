@@ -50,9 +50,9 @@ const ClarinetPage = ({ theme, onThemeToggle }) => {
           <Link to="/" className="back-link">
             <ArrowLeft size={20} /> Назад
           </Link>
-          <h1>Кларнет Bb</h1>
+          <h1>Clarinet Bb</h1>
         </div>
-        <button className="theme-toggle-btn" onClick={onThemeToggle} title="Переключить тему">
+        <button className="theme-toggle-btn" onClick={onThemeToggle} title="Switch theme">
           {theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}
         </button>
       </header>
@@ -96,11 +96,11 @@ const ClarinetPage = ({ theme, onThemeToggle }) => {
         </div>
 
         <div className="instrument-description">
-          <h3>О кларнете Bb</h3>
+          <h3>About clarinet Bb</h3>
           <p>
-            Кларнет — деревянный духовой инструмент с одинарной тростью. Транспонирующий инструмент 
-            (звучит на большую секунду ниже написанного). Обладает широким диапазоном, тёплым и 
-            богатым тембром, предоставляет музыканту невероятную выразительность и гибкость.
+            Clarinet – a woodwind instrument with a single reed . Transposing instrument
+            (sounds a major second lower than written) . It has a wide range ,
+            a warm and rich timbre , and provides the musician with incredible expressiveness and flexibility .
           </p>
         </div>
       </main>

@@ -6,7 +6,7 @@ const INSTRUMENT_GROUPS = {
     {
       name: 'Flutes',
       instruments: [
-        { id: 'flute', label: 'C Flute', path: '/flute', disabled: false, icon: Wind },
+        { id: 'flute', label: 'Flute C', path: '/flute', disabled: false, icon: Wind },
         { id: 'piccolo', label: 'Piccolo', disabled: true },
       ]
     },

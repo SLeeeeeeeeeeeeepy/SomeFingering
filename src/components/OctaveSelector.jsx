@@ -1,7 +1,7 @@
 const OctaveSelector = ({ octaves, activeOctave, onChange }) => {
   return (
     <div className="octave-selector">
-      <span className="selector-label">Октава :</span>
+      <span className="selector-label">Octave  :</span>
       <div className="selector-buttons">
         {octaves.map(octave => (
           <button

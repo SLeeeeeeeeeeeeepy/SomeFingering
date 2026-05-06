@@ -1,9 +1,9 @@
 export const NOTES = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"];
 
 export const OCTAVES = [
-  { id: "low", label: "низкая", value: 3 },
-  { id: "middle", label: "средний", value: 4 },
-  { id: "high", label: "высокий", value: 5 }
+  { id: "low", label: "Lower", value: 3 },
+  { id: "middle", label: "Medium", value: 4 },
+  { id: "high", label: "Higher", value: 5 }
 ];
 
 // T RK L1 L2 L3 R1 R2 R3 LP RP

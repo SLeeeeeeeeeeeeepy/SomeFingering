@@ -11,10 +11,10 @@ const Header = ({ activeCategory, onCategoryChange, theme, onThemeToggle }) => {
       <div className="header-top">
         <div className="header-title-area">
           <h1 className="main-title">Explore Fingerings</h1>
-          <p className="main-subtitle">Изучайте аппликатуры музыкальных инструментов</p>
+          <p className="main-subtitle">Learn the fingerings of musical instruments</p>
         </div>
         
-        <button className="theme-toggle-btn" onClick={onThemeToggle} title="Переключить тему">
+        <button className="theme-toggle-btn" onClick={onThemeToggle} title="Switch theme">
           {theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}
         </button>
       </div>

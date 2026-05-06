@@ -1,9 +1,9 @@
 export const NOTES = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"];
 
 export const OCTAVES = [
-  { id: "low", label: "низкая", value: 4 },
-  { id: "middle", label: "средний", value: 5 },
-  { id: "high", label: "высокий", value: 6 }
+  { id: "low", label: "Lower", value: 4 },
+  { id: "middle", label: "Middle", value: 5 },
+  { id: "high", label: "Higher", value: 6 }
 ];
 
 const FINGERINGS = {

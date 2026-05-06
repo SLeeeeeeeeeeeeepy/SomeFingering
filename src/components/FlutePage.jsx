@@ -53,9 +53,9 @@ const FlutePage = ({ theme, onThemeToggle }) => {
           <Link to="/" className="back-link">
             <ArrowLeft size={20} /> Назад
           </Link>
-          <h1>Флейта</h1>
+          <h1>Flute C</h1>
         </div>
-        <button className="theme-toggle-btn" onClick={onThemeToggle} title="Переключить тему">
+        <button className="theme-toggle-btn" onClick={onThemeToggle} title="Switch theme">
           {theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}
         </button>
       </header>
@@ -99,10 +99,10 @@ const FlutePage = ({ theme, onThemeToggle }) => {
         </div>
 
         <div className="instrument-description">
-          <h3>О флейте</h3>
+          <h3>About flute</h3>
           <p>
-            Поперечная флейта — деревянный духовой инструмент.
-            Звук образуется в результате рассечения потока воздуха о край амбушюрного отверстия.
+            The transverse flute is a wooden wind instrument .
+            The sound is produced by the air flow cutting across the edge of the mouthpiece .
           </p>
         </div>
       </main>
