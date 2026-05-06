@@ -5,6 +5,7 @@ import FlutePage from './components/FlutePage';
 import Header from './components/Header';
 
 import ClarinetPage from './components/ClarinetPage';
+import TrumpetPage from './components/TrumpetPage';
 
 function App() {
   const [theme, setTheme] = useState('light');
@@ -36,6 +37,7 @@ function App() {
             />
             <Route path="/flute" element={<FlutePage theme={theme} onThemeToggle={toggleTheme} />} />
             <Route path="/clarinet" element={<ClarinetPage theme={theme} onThemeToggle={toggleTheme} />} />
+            <Route path="/trumpet" element={<TrumpetPage theme={theme} onThemeToggle={toggleTheme} />} />
           </Routes>
         </main>
       </div>

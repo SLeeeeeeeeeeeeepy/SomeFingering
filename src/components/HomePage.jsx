@@ -28,7 +28,7 @@ const INSTRUMENT_GROUPS = {
     {
       name: 'High Brass',
       instruments: [
-        { id: 'trumpet', label: 'Trumpet', disabled: true },
+        { id: 'trumpet', label: 'Trumpet', path: '/trumpet', disabled: false, icon: Music },
         { id: 'frenchhorn', label: 'French Horn', disabled: true },
       ]
     },
