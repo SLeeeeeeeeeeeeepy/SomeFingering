@@ -1,7 +1,6 @@
 import { Moon, Sun } from 'lucide-react';
 
 const CATEGORIES = [
-  { id: 'string', label: 'String' },
   { id: 'woodwind', label: 'Woodwind' },
   { id: 'brass', label: 'Brass' }
 ];

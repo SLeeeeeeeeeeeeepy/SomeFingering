@@ -2,22 +2,6 @@ import { Link } from 'react-router-dom';
 import { Music, Wind } from 'lucide-react';
 
 const INSTRUMENT_GROUPS = {
-  string: [
-    {
-      name: 'Violins & Violas',
-      instruments: [
-        { id: 'violin', label: 'Violin', disabled: true },
-        { id: 'viola', label: 'Viola', disabled: true },
-      ]
-    },
-    {
-      name: 'Lower Strings',
-      instruments: [
-        { id: 'cello', label: 'Cello', disabled: true },
-        { id: 'doublebass', label: 'Double Bass', disabled: true },
-      ]
-    }
-  ],
   woodwind: [
     {
       name: 'Flutes',
